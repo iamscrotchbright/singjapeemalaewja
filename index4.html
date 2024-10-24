@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนวณค่า</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>HEE DECODE</h1>
+    <p>ฮีดีโค้ด โปรเเกรมถอดรหัสรุ่นใหม่ล่าสุดจากบักไบ้</p>
+    <input type="number" id="numberInput" placeholder="กรอกเลขที่ต้องการ" required>
+    <button onclick="calculate()">ถอดรหัส</button>
+    
+    <h2 id="result"></h2>
+
+    <script>
+        function calculate() {
+            const number = parseInt(document.getElementById('numberInput').value);
+            const result = number * 2 - 0 + 9 - 8 + 7 - 9 + 7 + 7 - 3;
+            document.getElementById('result').innerText = 'รหัสก็คื๊อออ: ' + result;
+
+            // ไปยังหน้า index5.html หลังจาก 2 วินาที
+            setTimeout(() => {
+                window.location.href = 'index5.html';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
